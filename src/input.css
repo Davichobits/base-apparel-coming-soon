@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 300 400 600;
+  font-display: swap;
+  src: url("../assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf") format("woff2");
+}
+
+@layer components{
+  .card-background{
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  }
+  .card-image-background{
+    background-image: url(../assets/images/bg-pattern-desktop.svg);
+  }
+  .button-background{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  }
+  .button-shadow{
+    box-shadow: 0px 15px 20px 0px hsla(0, 44%, 60%, 0.25);
+  }
+}
+
+@theme {
+  --color-Desaturated-Red: hsl(0, 36%, 70%);
+  --color-Soft-Red: hsl(0, 93%, 68%);
+  --color-Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+  --font-Josefin-Sans: "Josefin Sans"
+}
