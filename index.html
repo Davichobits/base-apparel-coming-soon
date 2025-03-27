@@ -11,7 +11,7 @@
 
   <main>
 
-    <div class="w-[375px] lg:w-[1440px] lg:h-[800px] lg:relative lg:pl-[165px] lg:pt-[62px] card-background card-image-background">
+    <div class="w-[375px] card-background card-image-background m-auto lg:w-[1440px] lg:h-[800px] lg:relative lg:pl-[165px] lg:pt-[62px] ">
       <div class="lg:w-[445px]">
 
         <div class=" h-[84px] p-8 lg:p-0 lg:mb-[136px]">
@@ -28,18 +28,23 @@
 
         <p class="px-8 text-sm text-center mb-8 lg:text-left lg:p-0 lg:text-base lg:mb-10">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <form class="border border-Desaturated-Red w-[311px] rounded-[28px] flex place-content-between m-auto lg:m-0" action="">
-          <input class="outline-none pl-4 text-sm" type="text" name="" id="" placeholder="Email Address">
-          <!-- <input class="bg-Soft-Red w-16 h-12 rounded-[28px]" type="submit" value=""> -->
-          <button class="button-background w-16 h-12 rounded-[28px] grid place-content-center cursor-pointer button-shadow">
+        <form id="form" class="border border-Desaturated-Red w-[311px] rounded-[28px] flex items-center place-content-end gap-4 m-auto h-12 lg:m-0 relative" action="">
+
+          <input class="absolute outline-none pl-4 text-sm invalid:border invalid:border-red-500 h-full rounded-[28px] w-full peer" type="email" name="" id="" placeholder="Email Address">
+          
+          <img id="error-icon" class="invisible peer-invalid:visible absolute right-[116px]" src="./assets/images/icon-error.svg" alt="icon error">
+          <p id="error-msg" class="invisible peer-invalid:visible absolute top-15 left-4 text-Soft-Red">Please provide a valid email</p>
+          
+          <button type="submit" id="button" class="h-full absolute button-background w-[100px] rounded-[28px] grid place-content-center cursor-pointer button-shadow text-[0.8125em]">
             <img src="./assets/images/icon-arrow.svg" alt="">
           </button>
+          
         </form>
       </div>
 
     </div>
 
   </main>
-
+  <script src="./main.js"></script>
 </body>
 </html>
